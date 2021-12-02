@@ -1,4 +1,4 @@
-**🎅 ADVENT OF CODE 2021 🎄**
+# 🎅 ADVENT OF CODE 2021 🎄
 
 ## Solutions by James Lindfors
 
