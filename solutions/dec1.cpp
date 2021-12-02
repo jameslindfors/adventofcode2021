@@ -29,8 +29,6 @@ int day1Part1() {
     for (uint16_t i = 0; i < SONAR_VALUES.size(); ++i) {
         if (SONAR_VALUES[i] > SONAR_VALUES[i-1]) {
             increased += 1;
-        } else if (SONAR_VALUES[i] < SONAR_VALUES[i-1]) {
-            // std::cout << "Decreased" << std::endl;
         }
     }
     return increased;
@@ -49,15 +47,8 @@ int day1Part2() {
             increasedWindow += 1;
             prevSum = sum;
             sum = 0;
-        } else if (sum == prevSum) {
-            prevSum = sum;
-            sum = 0;
-        } else if (sum < prevSum) {
-            prevSum = sum;
-            sum = 0;
-        }
+        } 
     }
-
     return increasedWindow;
 }
 
