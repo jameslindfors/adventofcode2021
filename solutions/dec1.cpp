@@ -47,11 +47,18 @@ int day1Part2() {
             increasedWindow += 1;
             prevSum = sum;
             sum = 0;
-        } 
+        } else if (sum == prevSum) {
+            prevSum = sum;
+            sum = 0;
+        } else if (sum < prevSum) {
+            prevSum = sum;
+            sum = 0;
+        }
     }
+
     return increasedWindow;
 }
 
 std::string day1Solution() {
-    return "December 1: Part 1: " + std::to_string(day1Part1()) + " " + "Part 2: " + std::to_string(day1Part2());
+    return "✨ December 1: Part 1: " + std::to_string(day1Part1()) + " ⭐  " + "Part 2: " + std::to_string(day1Part2()) + " ⭐";
 }
